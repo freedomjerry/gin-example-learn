@@ -7,6 +7,7 @@ require github.com/gin-gonic/gin v1.8.1
 require (
 	github.com/astaxie/beego v1.12.3 // indirect
 	github.com/denisenkom/go-mssqldb v0.0.0-20191124224453-732737034ffd // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-ini/ini v1.67.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
@@ -40,4 +41,5 @@ replace (
 	github.com/freedomjerry/gin-example-learn/pkg/setting => ../code/go-gin-example/pkg/setting
 	github.com/freedomjerry/gin-example-learn/pkg/util => ../code/go-gin-example/pkg/util
 	github.com/freedomjerry/gin-example-learn/routers => ../code/go-gin-example/routers
+	github.com/freedomjerry/gin-example-learn/middleware/jwt => ../code/go-gin-example/middleware/jwt
 )
