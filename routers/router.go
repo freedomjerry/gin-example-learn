@@ -6,6 +6,8 @@ import (
 	"github.com/freedomjerry/gin-example-learn/routers/API"
 	v1 "github.com/freedomjerry/gin-example-learn/routers/API/v1"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func InitRouter() *gin.Engine {
@@ -19,7 +21,10 @@ func InitRouter() *gin.Engine {
 
 	r.GET("/auth", API.GetAuth)
 
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+
 	apiv1 := r.Group("/api/v1")
+
 	apiv1.Use(jwt.JWT())
 	{
 		apiv1.GET("/tags", v1.GetTags)

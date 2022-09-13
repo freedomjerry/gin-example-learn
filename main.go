@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	_ "github.com/freedomjerry/gin-example-learn/docs"
 	"github.com/freedomjerry/gin-example-learn/pkg/setting"
 	"github.com/freedomjerry/gin-example-learn/routers"
 	"net/http"
